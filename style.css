@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tilt Neon;
+    color: rgb(0, 255, 55);
+}
+
+body{
+    background-color: rgb(30, 31, 30);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 100vh; */
+}
+
+.screen{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 100vw;
+    transition: margin 0.5s;
+}
+.screen.up {
+    margin-top: -100vh;
+}
+  
+.btn{
+    font-size: 2em;
+    padding: 0.2em;
+    width: 5em;
+    margin: 0.2em;
+    cursor: pointer;
+    border: 0.1em solid white;
+    background-color: rgb(8, 8, 8);
+    border-radius: 0.5em;
+    transition: 300ms ease-out;
+}
+.btn:hover{
+    box-shadow: 0 5px 10px 1px rgb(0, 255, 55);
+}
+.hname{
+    font-size: 4em;
+    
+}
+.btn_group{
+   display: flex;
+   justify-content: space-between;
+    
+}
+
+.field{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card{
+    margin: 5px;
+    perspective: 800px;
+}
+.card__inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 500ms;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card__inner.is__flipped{
+    transform: rotateY(180deg);
+ 
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    backface-visibility: hidden;
+   
+}
+
+.front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 24, 24);
+    font-size: 5em;
+    color: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 1px 2px rgb(0,255,55);
+   
+}
+.front::after{
+    content: '?';
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.back.success{
+    background-image: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24FE41;
+    font-size: 5em;
+}
+.back.success::after{
+    content: '+';
+}
+
+
+.restart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

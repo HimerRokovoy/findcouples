@@ -151,6 +151,7 @@ function startGame() {
 
 function flippBackAll(){
     field.childNodes.forEach(item =>{
+        
         item.firstChild.classList.remove('is__flipped')
     })
 }
@@ -158,12 +159,13 @@ function flippBackAll(){
 function judge(first,second){
     console.log(firstOpendCard.lastChild)
     if(firstOpendCard.lastChild.style.backgroundImage === secondOpendCard.lastChild.style.backgroundImage){
-        firstOpendCard.parentNode.remove()
-        secondOpendCard.parentNode.remove()
+        firstOpendCard.classList.add('guessed')
+        secondOpendCard.classList.add('guessed')
         
     }
     else{
-        flippBackAll();
+        firstOpendCard.classList.toggle('is__flipped')
+        secondOpendCard.classList.toggle('is__flipped')
     }
     secondOpendCard = null;
     firstOpendCard = null;

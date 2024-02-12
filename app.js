@@ -161,7 +161,7 @@ function judge(first,second){
     if(firstOpendCard.lastChild.style.backgroundImage === secondOpendCard.lastChild.style.backgroundImage){
         firstOpendCard.classList.add('guessed')
         secondOpendCard.classList.add('guessed')
-        
+        numOpend +=2;
     }
     else{
         firstOpendCard.classList.toggle('is__flipped')

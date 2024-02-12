@@ -169,6 +169,7 @@ function judge(first,second){
     }
     if(numCards === numOpend){
         flippBackAll()
+        numOpend = 0;
     }
     secondOpendCard = null;
     firstOpendCard = null;

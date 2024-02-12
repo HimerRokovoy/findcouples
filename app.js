@@ -167,6 +167,9 @@ function judge(first,second){
         firstOpendCard.classList.toggle('is__flipped')
         secondOpendCard.classList.toggle('is__flipped')
     }
+    if(numCards === numOpend){
+        flippBackAll()
+    }
     secondOpendCard = null;
     firstOpendCard = null;
     clickable = true
